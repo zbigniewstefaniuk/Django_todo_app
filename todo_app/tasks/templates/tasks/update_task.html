@@ -1,22 +1,21 @@
 {% extends 'tasks/layout.html' %}
 
 
-{% block title %}Todo {% endblock %}
+{% block title %}Update a Todo{% endblock %}
 
 
 {% block body %}
-    <h2>TODO</h2>
+    <h2>U</h2>
 
     <form method="POST" action="/">
         {% csrf_token %}
         {{form.title}}
-        <input type="submit" name="Add Todo" />
+        <input type="submit" name="Update Todo" />
     </form>
 
 
     {% for task in tasks %}
     <div>
-        <a href="{% url 'update_task' task.id %}">Update</a>
         <p>{{task}}</p>
     </div>
     {% endfor %}
