@@ -5,18 +5,12 @@
 
 
 {% block body %}
-    <h2>U</h2>
+    <h2>Change todo</h2>
 
-    <form method="POST" action="/">
+    <form method="POST" action="">
         {% csrf_token %}
-        {{form.title}}
+        {{form}}
         <input type="submit" name="Update Todo" />
     </form>
 
-
-    {% for task in tasks %}
-    <div>
-        <p>{{task}}</p>
-    </div>
-    {% endfor %}
 {% endblock body %}
