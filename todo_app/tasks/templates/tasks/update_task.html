@@ -8,11 +8,18 @@
 <div class="todo-app">
     <h1>Edit todo</h1>
     <br />
-    <form method="POST" action="">
-        {% csrf_token %}
-        {{form}}
-        <input type="submit" name="Update Todo" />
-    </form>
+    <div class="form-container">
+        <form method="POST" action="" class="todo-form">
+            {% csrf_token %}
+            {{ form.title }}
+            <input type="submit" name="Update Todo" class="todo-button" value="Done" />
+            <div class="complete-todo">
+                <label><p>Is it complete?</p></label>
+                {{ form.complete }}
+            </div>
+
+        </form>
+    </div>
 </div>
 
 
