@@ -1,21 +1,21 @@
 {% extends 'tasks/layout.html' %}
 
 
-{% block title %}Update a Todo{% endblock %}
+{% block title %}Deleting "{{ todo }}"{% endblock %}
 
 
 {% block body %}
 <div class="todo-app">
     <h1>Are you sure you want to <span style="color: #e95a74;">delete?</span></h1>
     <br />
-    <h2>"{{ todo }}"</h2>
+    <h2><i>"{{ todo }}"</i></h2>
     <br />
     <a class="cancel-link" href="{% url 'list' %}">No, cancel it</a>
 
     <form method="POST" action="">
         {% csrf_token %}
         {{form}}
-        <input class="confirm-delete" type="submit" name="Confirm" placeholder="Delete" />
+        <input class="confirm-delete" type="submit" name="Confirm" value="Definitely Delete" />
     </form>
 
 </div>
