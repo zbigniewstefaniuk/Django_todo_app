@@ -1,6 +1,7 @@
 {% extends 'tasks/layout.html' %}
 
 
+
 {% block title %}Update a Todo{% endblock %}
 
 
@@ -14,7 +15,9 @@
             {{ form.title }}
             <input type="submit" name="Update Todo" class="todo-button" value="Done" />
             <div class="complete-todo">
-                <label><p>Is it complete?</p></label>
+                <label>
+                    <p>Is it complete?</p>
+                </label>
                 {{ form.complete }}
             </div>
 
