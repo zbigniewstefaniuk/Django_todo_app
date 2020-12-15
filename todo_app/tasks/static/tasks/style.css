@@ -37,13 +37,16 @@ html {
 }
 
 .todo-app h1,
-.todo-app h2 {
+.todo-app h2,
+.todo-app p {
   color: var(--blue-headers);
   margin: 1rem auto;
 }
 
 .todo-app .todo-form {
   margin: 32px;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .todo-app .todo-input {
@@ -54,6 +57,7 @@ html {
   width: 320px;
   background: transparent;
   color: var(--grey-text);
+  color: var(--blue-headers);
 }
 
 .todo-app .todo-button {
@@ -66,6 +70,64 @@ html {
   background: #179deb;
   color: #ececec;
   text-transform: capitalize;
+}
+
+.todo-app .complete-todo {
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.todo-app .complete-todo input[type=checkbox] {
+  padding: 1rem;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  cursor: pointer;
+}
+
+.todo-app .cancel-link {
+  margin: 1rem auto;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  color: #39b529;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 1rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.todo-app .cancel-link:hover {
+  background: #39b529;
+  color: var(--bg);
+}
+
+.todo-app .confirm-delete {
+  margin: 1rem auto;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding: .5rem 1rem;
+  background: var(--bg);
+  color: #e95a74;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.todo-app .confirm-delete:hover {
+  background: #e95a74;
+  color: var(--bg);
 }
 
 .todo-app .todo-row {
@@ -107,33 +169,5 @@ html {
 .todo-app .todo-row:nth-child(4n + 3) {
   background: -webkit-gradient(linear, left top, right top, from(#149fff), to(#117aff));
   background: linear-gradient(90deg, #149fff 0%, #117aff 100%);
-}
-
-.todo-app .cancel-link {
-  text-decoration: none;
-  color: #39b529;
-  font-weight: 700;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.todo-app .cancel-link:hover {
-  opacity: 60%;
-}
-
-.todo-app .confirm-delete {
-  margin: 1rem auto;
-  font-size: 1rem;
-  font-weight: 600;
-  padding: .5rem 1rem;
-  background-color: #e95a74;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  border-radius: 1rem;
-}
-
-.todo-app .confirm-delete:hover {
-  opacity: 60%;
 }
 /*# sourceMappingURL=style.css.map */
