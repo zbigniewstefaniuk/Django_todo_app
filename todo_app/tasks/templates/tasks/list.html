@@ -10,6 +10,13 @@
 <body>
     <h2>TODO</h2>
 
+    <form method="POST" action="/">
+        {% csrf_token %}
+        {{form.title}}
+        <input type="submit" name="Add Todo" />
+    </form>
+
+
     {% for task in tasks %}
     <div>
         <p>{{task}}</p>
