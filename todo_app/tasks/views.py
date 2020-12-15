@@ -36,9 +36,23 @@ def update_todo(request, pk):
         if form.is_valid():
             form.save()
         return redirect('/')
-        
+
     context = {
         'form': form
     }
 
     return render(request, 'tasks/update_task.html', context)
+
+
+def delete_todo(request, pk):
+    todo = Task.objects.get(id=pk)
+
+    if request.method == 'POST':
+        todo.delete()
+        return redirect('/')
+
+    context = {
+        'todo': todo
+    }
+
+    return render(request, 'tasks/delete.html', context)
