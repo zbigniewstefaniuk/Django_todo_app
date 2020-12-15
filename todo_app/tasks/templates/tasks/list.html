@@ -1,5 +1,5 @@
 {% extends 'tasks/layout.html' %}
-
+{% load static %}
 
 {% block title %}Todo {% endblock %}
 
@@ -26,9 +26,17 @@
             {% endif %}
 
             <div class="todo-options">
-                
-                <a href="{% url 'update_task' task.id %}">Edit</a>
-                <a href="{% url 'delete' task.id %}">Delete</a>
+                <div class="img-wrap">
+                    <a href="{% url 'update_task' task.id %}">
+                        <img id="icons" src="{% static 'tasks/images/edit.png' %}" alt="Edit">
+                    </a>
+                </div>
+                <div class="img-wrap">
+                    <a href="{% url 'delete' task.id %}">
+                        <img id="icons" src="{% static 'tasks/images/delete.png' %}" alt="Delete">
+                    </a>
+                </div>
+
 
             </div>
 
