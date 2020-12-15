@@ -170,4 +170,78 @@ html {
   background: -webkit-gradient(linear, left top, right top, from(#149fff), to(#117aff));
   background: linear-gradient(90deg, #149fff 0%, #117aff 100%);
 }
+
+.todo-app .todo-options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.todo-app .img-wrap {
+  margin: 0 .5rem;
+}
+
+.todo-app .img-wrap #icons {
+  -webkit-filter: invert(88%) sepia(24%) saturate(31%) hue-rotate(197deg) brightness(105%) contrast(100%);
+          filter: invert(88%) sepia(24%) saturate(31%) hue-rotate(197deg) brightness(105%) contrast(100%);
+  width: calc(10px + 1vmin);
+  height: calc(10px + 1vmin);
+  -webkit-transition: .4s;
+  transition: .4s;
+  background: transparent;
+}
+
+.todo-app .img-wrap #icons:hover {
+  width: calc(20px + 1vmin);
+  height: calc(20px + 1vmin);
+}
+
+.footer-main {
+  overflow: hidden;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0.8em;
+  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--bg);
+  text-align: center;
+  width: 100%;
+  background-color: #2d353d;
+}
+
+.footer-main .footer-inside {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.footer-main .footer-inside > div {
+  float: left;
+}
+
+.footer-main .github-icon {
+  height: 25px;
+  width: 25px;
+  margin-left: 1em;
+  -webkit-filter: invert(95%) sepia(2%) saturate(759%) hue-rotate(198deg) brightness(103%) contrast(98%);
+          filter: invert(95%) sepia(2%) saturate(759%) hue-rotate(198deg) brightness(103%) contrast(98%);
+}
 /*# sourceMappingURL=style.css.map */

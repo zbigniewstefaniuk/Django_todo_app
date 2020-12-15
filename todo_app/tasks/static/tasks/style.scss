@@ -167,5 +167,65 @@ html {
                 rgba(17, 122, 255, 1) 100%);
     }
 
+    .todo-options {
+        display: flex;
+        flex-direction: row;
+    }
 
+    .img-wrap {
+        margin: 0 .5rem;
+
+        #icons {
+            filter: invert(88%) sepia(24%) saturate(31%) hue-rotate(197deg) brightness(105%) contrast(100%);
+            width: calc(10px + 1vmin);
+            height: calc(10px + 1vmin);
+            transition: .4s;
+            background: transparent;
+
+            &:hover {
+                width: calc(20px + 1vmin);
+                height: calc(20px + 1vmin);
+            }
+        }
+    }
+
+
+}
+
+// FOOTER
+.footer-main {
+    overflow: hidden;
+    position: fixed;
+    align-items: center;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0.8em;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--bg);
+    text-align: center;
+    width: 100%;
+    background-color: #2d353d;
+
+    .footer-inside {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-inside>div {
+        float: left;
+    }
+
+    .github-icon {
+        height: 25px;
+        width: 25px;
+        margin-left: 1em;
+        filter: invert(95%) sepia(2%) saturate(759%) hue-rotate(198deg) brightness(103%) contrast(98%);
+        ; // with this filter I changed color of image
+    }
 }
