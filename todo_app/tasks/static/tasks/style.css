@@ -1,0 +1,139 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --bg: #f7f8fd;
+  --grey-text: #c3d1d9;
+  --blue-headers: #283459;
+  --app-bg: #f9f9f9;
+  --box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 0.67);
+}
+
+.root {
+  text-align: center;
+  background-color: var(--bg);
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+
+.todo-app h1,
+.todo-app h2 {
+  color: var(--blue-headers);
+  margin: 1rem auto;
+}
+
+.todo-app .todo-form {
+  margin: 32px;
+}
+
+.todo-app .todo-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 1rem 0 0 1rem;
+  border: 2px solid #179deb;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: var(--grey-text);
+}
+
+.todo-app .todo-button {
+  font-weight: 600;
+  padding: 16px;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+  outline: none;
+  background: #179deb;
+  color: #ececec;
+  text-transform: capitalize;
+}
+
+.todo-app .todo-row {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 14px auto;
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#4f5a68), to(#a0bcda));
+  background: linear-gradient(90deg, #4f5a68 0%, #a0bcda 100%);
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.todo-app .todo-row:hover {
+  opacity: 70%;
+}
+
+.todo-app .todo-row:nth-child(4n + 1) {
+  background: -webkit-gradient(linear, left top, right top, from(#0d1e52), to(#9b00fa));
+  background: linear-gradient(90deg, #0d1e52, #9b00fa 100%);
+}
+
+.todo-app .todo-row:nth-child(4n + 2) {
+  background: -webkit-gradient(linear, left top, right top, from(#0665f7), to(#ae008b));
+  background: linear-gradient(90deg, #0665f7, #ae008b 100%);
+}
+
+.todo-app .todo-row:nth-child(4n + 3) {
+  background: -webkit-gradient(linear, left top, right top, from(#149fff), to(#117aff));
+  background: linear-gradient(90deg, #149fff 0%, #117aff 100%);
+}
+
+.todo-app .cancel-link {
+  text-decoration: none;
+  color: #39b529;
+  font-weight: 700;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.todo-app .cancel-link:hover {
+  opacity: 60%;
+}
+
+.todo-app .confirm-delete {
+  margin: 1rem auto;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: .5rem 1rem;
+  background-color: #e95a74;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.todo-app .confirm-delete:hover {
+  opacity: 60%;
+}
+/*# sourceMappingURL=style.css.map */

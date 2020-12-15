@@ -5,12 +5,15 @@
 
 
 {% block body %}
-    <h2>Change todo</h2>
-
+<div class="todo-app">
+    <h1>Edit todo</h1>
+    <br />
     <form method="POST" action="">
         {% csrf_token %}
         {{form}}
         <input type="submit" name="Update Todo" />
     </form>
+</div>
+
 
 {% endblock body %}

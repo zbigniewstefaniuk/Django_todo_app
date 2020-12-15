@@ -5,14 +5,19 @@
 
 
 {% block body %}
-<h2>Are you sure you want to delete "{{ todo }}"</h2>
+<div class="todo-app">
+    <h1>Are you sure you want to <span style="color: #e95a74;">delete?</span></h1>
+    <br />
+    <h2>"{{ todo }}"</h2>
+    <br />
+    <a class="cancel-link" href="{% url 'list' %}">No, cancel it</a>
 
-<a href="{% url 'list' %}">No, cancel it</a>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form}}
+        <input class="confirm-delete" type="submit" name="Confirm" placeholder="Delete" />
+    </form>
 
-<form method="POST" action="" >
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" name="Confirm" placeholder="Delete"/>
-</form>
+</div>
 
 {% endblock body %}
